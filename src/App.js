@@ -7,6 +7,8 @@ import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
 import { ShopContextProvider } from "./context/shop-context";
+import { LanguageProvider } from "./context/LanguageContext";
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -14,6 +16,7 @@ function App() {
     setIsDarkMode((prevMode) => !prevMode);
   };
   return (
+    <LanguageProvider>
 
     <div className={isDarkMode ? "dark-mode" : "light-mode"}>
       <ShopContextProvider>
@@ -28,6 +31,8 @@ function App() {
         </Router>
       </ShopContextProvider>
     </div>
+    </LanguageProvider>
+
   );
 }
 

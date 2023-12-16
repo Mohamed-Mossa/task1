@@ -1,6 +1,12 @@
 {
-    "navbar.products": "Products",
-    "navbar.settings": "Settings",
-    "cart.yourCartItems": "Your Cart Items"
-  }
-  
+  "products": "Products",
+  "settings": "Settings",
+  "darkMode": "Switch to Dark Mode",
+  "lightMode": "Switch to Light Mode",
+  "subtotal": "Subtotal",
+  "checkout": "Checkout",
+  "emptyCart": "Empty",
+  "emptyCartMessage": "Your Shopping Cart is Empty",
+  "shopTitle": "Mousa Shop",
+  "addToCart": "Add To Cart"
+}

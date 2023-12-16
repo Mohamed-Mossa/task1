@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import "./cart.css";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export const Cart = () => {
   const {
@@ -12,6 +13,7 @@ export const Cart = () => {
     removeFromCart,
   } = useContext(ShopContext);
 
+  const { language, translations } = useContext(LanguageContext);
   const totalAmount = getTotalCartAmount();
 
   const handleRemoveFromCart = (itemId) => {
@@ -23,7 +25,7 @@ export const Cart = () => {
   return (
     <div className="cart">
       <div>
-        <h1>Your Cart Items</h1>
+        <h1>{language === "en" ? translations.en.yourCartItems : translations.de.yourCartItems}</h1>
       </div>
       <div className="cart">
         {Object.keys(cartItems).map((itemId) => {
@@ -65,12 +67,12 @@ export const Cart = () => {
       {totalAmount > 0 ? (
         <div className="checkout">
           <p>Subtotal: ${totalAmount}</p>
-          <button onClick={checkout}>Checkout</button>
-          <button onClick={checkout}>Empty</button>
+          <button onClick={checkout}>{translations[language].checkout}</button>
+          <button onClick={checkout}>{translations[language].empty}</button>
         </div>
         
       ) : (
-        <h1>Your Shopping Cart is Empty</h1>
+        <h1>{language === "en" ? translations.en.cartIsEmpty : translations.de.cartIsEmpty}</h1>
       )}
     </div>
   );

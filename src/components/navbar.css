@@ -9,6 +9,21 @@
   padding: 0 20px;
 }
 
+.menu-toggle {
+  display: none; /* Initially hide toggle on larger screens */
+  cursor: pointer;
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show toggle menu when the show class is added */
 .links {
   display: flex;
   align-items: center;
@@ -39,29 +54,30 @@
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Change to a column layout for smaller screens */
-    height: auto;
+  .menu-toggle {
+    display: block; /* Show toggle button on smaller screens */
+    margin-right: 10px;
   }
 
   .links {
-    margin-top: 20px;
-    justify-content: center;
+    display: none; /* Initially hide links on smaller screens */
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgb(19, 19, 19);
+    width: 100%;
+    padding: 10px 0;
+    transition: height 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  .links.show {
+    height: 200px; /* Adjust height as needed */
   }
 
   .links a {
-    margin: 0 10px;
+    margin: 10px 0;
     font-size: 16px;
-  }
-
-  .cart-link {
-    margin-top: 20px;
-  }
-
-  .cart-count {
-    top: -6px;
-    right: -6px;
-    font-size: 12px;
-    padding: 3px 6px;
   }
 }
