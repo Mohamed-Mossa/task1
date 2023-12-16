@@ -1,0 +1,14 @@
+// Tabs.js
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Tabs = () => {
+  return (
+    <div className="tabs">
+      <Link to="/products">Products</Link>
+      <Link to="/settings">Settings</Link>
+    </div>
+  );
+};
+
+export default Tabs;
