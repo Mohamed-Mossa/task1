@@ -1,7 +1,12 @@
 {
-    "navbar.products": "Productos",
-    "navbar.settings": "Ajustes",
-    "cart.yourCartItems": "Tus artículos en el carrito"
-    
-  }
-  
+  "products": "Productos",
+  "settings": "Configuración",
+  "darkMode": "Cambiar a Modo Oscuro",
+  "lightMode": "Cambiar a Modo Claro",
+  "subtotal": "Subtotal",
+  "checkout": "Pagar",
+  "emptyCart": "Vaciar",
+  "emptyCartMessage": "Tu carrito de compras está vacío",
+  "shopTitle": "Tienda Mousa",
+  "addToCart": "Agregar al Carrito"
+}
